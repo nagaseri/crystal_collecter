@@ -3,32 +3,51 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<title>Crystal Collector FUCK YEAH</title>
-  </style>
+	<title>Crystal Collector</title>
 </head>
 <body>
-
+<header>
+	<div class="container">
+	Crystal Game
+	</div>
+</header>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
-				<h1>Number to guess: <div id="numberToGuess"></div></h1>
+				<div class="panel panel-default">
+  					<div class="panel-body">
+						<h1>Rules of the Game: </h1>
+						<p>1) You will be given a random number to guess</p>
+						<p>2) Click on the crystals to find out their hidden values</p>
+						<p>3) Continue adding the values of the crystals until you reach the number to guess</p>
+						<p>4) You will win if you hit the number, otherwise, you lose! </p>
+						<p>5) The randomized number and values of the crystals will reset every time you lose or win. Good luck! </p></div>
+					</div>
+				</div>
+			</div>
+		<div class="row">
+			<div class="col-md-8">
+				<div class="panel panel-default">
+  					<div class="panel-body">
+						<h1>Number to guess: <div id="numberToGuess"></div></h1>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-8">
-				<h1>Total wins: <div id="winsCounter"></div></h1>
-				<h1>Total losses: <div id="lossesCounter"></div></h1>
-				<h1>Total score: <div id="totalScoreCounter"></div>
+				<div class="panel panel-default">
+  					<div class="panel-body">
+						<h1>Total wins: <div id="winsCounter"></div></h1>
+						<h1>Total losses: <div id="lossesCounter"></div></h1>
+						<h1>Total score: <div id="totalScoreCounter"></div></h1>
+					</div>
+				</div>
 			</div>
-
-				
-
 	</div>
 
 	<div id="crystals">
- 
  		<!-- Crystal images -->
  		<img class="crystal1" src="https://ae01.alicdn.com/kf/HTB148VELpXXXXcCaXXXq6xXFXXXG/Natural-font-b-Rose-b-font-font-b-Quartz-b-font-Crystal-font-b-Heart-b.jpg" alt="crystals">
 
@@ -38,12 +57,18 @@
 
 		<img class="crystal4" src="https://is.alicdn.com/img/pb/682/945/909/909945682_039.jpg" alt="crystals">
 	</div>
+<footer>
+	<div class="container">
+      Copyright &copy; 2017 Eri Nagase
+    </div>
+</footer>
 
 	<!-- jQuery link -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-	<!-- JAVASCRIPT YESSSS -->
+	<!-- JAVASCRIPT link-->
 	<script type="text/javascript" src="assets/javascript/game.js">	
 	</script>
+
 </body>
 </html>
