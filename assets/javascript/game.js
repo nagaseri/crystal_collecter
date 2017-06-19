@@ -27,50 +27,79 @@
 		computerChoice = Math.floor((Math.random() * 120) + 19);
 			console.log('computerChoice', computerChoice);
   			$("#numberToGuess").text(computerChoice);
-  		var crystalValue1 = Math.floor((Math.random() * 12) + 1);
+  			crystalValue1 = Math.floor((Math.random() * 12) + 1);
 			console.log('crystalValue1', crystalValue1);
-		var crystalValue2 = Math.floor((Math.random() * 12) + 1);
+			crystalValue2 = Math.floor((Math.random() * 12) + 1);
 			console.log('crystalValue2', crystalValue2);
-		var crystalValue3 = Math.floor((Math.random() * 12) + 1);
+			crystalValue3 = Math.floor((Math.random() * 12) + 1);
 			console.log('crystalValue3', crystalValue3);
-		var crystalValue4 = Math.floor((Math.random() * 12) + 1);
+			crystalValue4 = Math.floor((Math.random() * 12) + 1);
 			console.log('crystalValue4', crystalValue4);
+		totalScoreCounter = 0;
 	}
-
-gameReset();
 
 //Clicking on crystal will add to total score counter
  $(".crystal1").on("click", function() {
     totalScoreCounter += crystalValue1;
-    $("#totalScoreCounter").text(crystalValue1);
+    $("#totalScoreCounter").text(totalScoreCounter);
     console.log('mytotalScoreCounter', totalScoreCounter);
-    if(totalScoreCounter === computerChoice) {
-    	winsCounter++;
-    	$("#winsCounter").text(winsCounter);
-    	gameReset();
-    }
+    	if(totalScoreCounter === computerChoice) {
+    		winsCounter++;
+    		$("#winsCounter").text(winsCounter);
+    		gameReset();
+    	}
+    	else if(totalScoreCounter > computerChoice){
+    		lossesCounter++;
+    		$("#lossesCounter").text(lossesCounter);
+    		gameReset();
+    	}
   });
 
 $(".crystal2").on("click", function() {
 	totalScoreCounter += crystalValue2;
+	$("#totalScoreCounter").text(totalScoreCounter);
 	console.log('mytotalScoreCounter', totalScoreCounter);
+		if(totalScoreCounter === computerChoice) {
+    		winsCounter++;
+    		$("#winsCounter").text(winsCounter);
+    		gameReset();
+    	}
+    	else if(totalScoreCounter > computerChoice){
+    		lossesCounter++;
+    		$("#lossesCounter").text(lossesCounter);
+    		gameReset();
+    	}
   });
 
 $(".crystal3").on("click", function() {
 	totalScoreCounter += crystalValue3;
+	$("#totalScoreCounter").text(totalScoreCounter);
 	console.log('mytotalScoreCounter', totalScoreCounter);
+		if(totalScoreCounter === computerChoice) {
+    		winsCounter++;
+    		$("#winsCounter").text(winsCounter);
+    		gameReset();
+    	}
+    	else if(totalScoreCounter > computerChoice){
+    		lossesCounter++;
+    		$("#lossesCounter").text(lossesCounter);
+    		gameReset();
+    	}
   });
 
 $(".crystal4").on("click", function() {
 	totalScoreCounter += crystalValue4;
+	$("#totalScoreCounter").text(totalScoreCounter);
 	console.log('mytotalScoreCounter', totalScoreCounter);
+		if(totalScoreCounter === computerChoice) {
+    		winsCounter++;
+    		$("#winsCounter").text(winsCounter);
+    		gameReset();
+    	}
+    	else if(totalScoreCounter > computerChoice){
+    		lossesCounter++;
+    		$("#lossesCounter").text(lossesCounter);
+    		gameReset();
+    	}
   });
 
-
-//If total score matches computer choice
-	//wins counter increments
-	//game resets
-
-//if total score exceeds computer choice
-	//losses counter increments
-	//game resets 
